@@ -8,7 +8,7 @@ fichero="$1"
 echo "Procesando fichero $1"
 lineas_totales=$(wc -l < "$fichero")
 
-# División entera, con un resto menor o igual que 7
+# División entera, con un resto menor que 7
 lineas_fraccion=$((lineas_totales / DENOMINADOR))
 
 head -n "$lineas_fraccion" "$fichero" > "${fichero}_recortado"
